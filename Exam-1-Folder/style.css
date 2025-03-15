@@ -1,0 +1,136 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* General CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Enhanced hover shadow depth for better visibility */
+.news-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.news-content a:hover {
+    color: #0a3f6b;
+    text-decoration: underline;
+}
+
+.news-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-content {
+    padding: 15px;
+}
+
+.news-content h2 {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.news-content .date {
+    color: #777;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    margin-bottom: 10px;
+}
+
+.news-content a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Enhanced hover link color for clear interactivity */
+.news-content a:hover {
+    color: #0d5c91;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #217dbb;
+    font-weight: bold;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        grid-column: 1;
+    }
+}
+
+/* Accessibility improvement for keyboard navigation */
+a:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 3px;
+}   
