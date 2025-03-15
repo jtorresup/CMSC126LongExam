@@ -1,0 +1,278 @@
+@font-face {
+    font-family: "reddit-sans";
+    src:
+        url("/02_replication/assets/fonts/reddit_sans/RedditSans-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "reddit-sans";
+    src:
+        url("/02_replication/assets/fonts/reddit_sans/RedditSans-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --beluga: #ffffff;
+    --dugong: #f2f6f7;
+    --dolphin: #d7dfe2;
+    --seal: #b8c7cc;
+    --narwhal: #7a9299;
+    --orca: #1b2426;
+    --orangered: #ff4500;
+}
+
+* {
+    font-family: "reddit-sans";
+    font-size: 12px;
+}
+
+body {
+    background-color: var(--dolphin);
+}
+
+main {
+    border-top: solid 1px;
+    background-color: var(--dugong);
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+#more-subreddits {
+    font-weight: bold;
+}
+
+#subreddits-nav {
+    max-width: 14vw;
+    border-right: solid 1px;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+
+        #subreddits {
+            margin: 8px 16px;
+        }
+    }
+
+    #more-links {
+        margin-right: 12px;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    .subreddit {
+        display: flex;
+        font-weight: bold;
+        color: var(--orca);
+        align-items: center;
+    }
+
+    .advert {
+        color: var(--narwhal);
+
+        p {
+            text-align: right;
+            font-weight: bold;
+            font-size: 11px;
+        }
+    }
+
+    .more-links-ctrl {
+        border: solid var(--seal) 1px;
+        background-color: var(--dolphin);
+        color: var(--narwhal);
+        padding: 8px;
+
+        a {
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 11px;
+        }
+    }
+
+    .current-sub {
+        border-top: solid 1px;
+        border-bottom: solid 1px;
+    }
+}
+
+#topic-list {
+    border-right: solid 1px;
+    max-width: 43vw;
+
+    .topic {
+        padding: 8px 12px;
+        align-items: center;
+        gap: 12px;
+
+        .topic-ctrls {
+            li {
+                list-style-type: none;
+
+                button {
+                    border: none;
+                    font-weight: bold;
+                    color: gray;
+                }
+            }
+        }
+
+        .voting {
+            align-items: center;
+
+            button {
+                border: none;
+                background-color: none;
+                color: gray;
+            }
+        }
+
+        .topic-info {
+
+            span,
+            menu,
+            .username {
+                color: gray;
+            }
+
+            .topic-title {
+                font-size: 14px;
+            }
+        }
+
+        .topic-num {
+            font-size: 16px;
+            color: gray;
+        }
+    }
+}
+
+.column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.space-reset {
+    margin: 0;
+    padding: 0;
+}
+
+.comments-section {
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.comment-box {
+    display: flex;
+    margin: 10px 0;
+}
+
+.comment-box input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.comment-box button {
+    background: #0079d3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.comments {
+    margin-top: 15px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.comment.reply {
+    margin-left: 30px;
+}
+
+.vote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.upvote, .downvote {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.upvote {
+    color: #ff4500;
+}
+
+.downvote {
+    color: #7193ff;
+}
+
+.comment-content p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.comment-header strong {
+    color: #ff6600;
+}
+
+.comment-header .collapse {
+    color: #888;
+    cursor: pointer;
+}
+
+.comment-actions a {
+    font-size: 10px;
+    color: #3366cc;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+/* Style the post title link to match the faded black and visited violet color */
+.post-title a {
+    color: #551a8b; /* Default link color (visited - violet) */
+    text-decoration: none;
+}
+
+.post-title a:visited {
+    color: #551a8b;
+}
+
+.post-title a:hover {
+    color: #333; /* Slightly faded black hover effect */
+}
