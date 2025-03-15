@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(to right, #ffcc00, #ff9900);
+    padding: 0.1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #222;
+    border-bottom: 4px solid #fff;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+
+.header-img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.header-text {
+    text-align: left;
+}
+
+.header-img-wrapper {
+    width: 120px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+h1 {
+    margin: 0;
+}
+
+.carousel {
+    background-color: #fffbe6;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+/* Steps Container */
+.steps {
+    position: relative;
+    height: 550px;
+}
+
+/* Individual Step */
+.step {
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(30px);
+    transition:
+        opacity 0.5s ease-in-out,
+        transform 0.5s ease-in-out,
+        visibility 0s linear 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step ul {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px; 
+    padding-left: 1.5rem; 
+}
+
+.step[aria-hidden="true"] {
+    pointer-events: none;
+}
+
+.step[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition:
+        opacity 0.5s ease-in-out,
+        transform 0.5s ease-in-out,
+        visibility 0s linear 0s;
+}
+
+.step:first-of-type {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Show Step when Targeted */
+.step:target {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition:
+        opacity 0.5s ease-in-out,
+        transform 0.5s ease-in-out,
+        visibility 0s linear 0s;
+}
+
+/* Images */
+.step img {
+    width: 85%;
+    max-width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 22px;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    outline: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Hover & Keyboard Focus Effect */
+.prev:hover,
+.next:hover,
+.prev:focus-visible,
+.next:focus-visible {
+    background-color: #ff9900;
+    box-shadow: 0 0 12px rgba(255, 153, 0, 0.6);
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Step Indicators */
+.indicators {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#step0:target .indicators a[href="#step0"],
+#step1:target .indicators a[href="#step1"],
+#step2:target .indicators a[href="#step2"],
+#step3:target .indicators a[href="#step3"],
+#step4:target .indicators a[href="#step4"],
+#step5:target .indicators a[href="#step5"],
+#step6:target .indicators a[href="#step6"] {
+    background-color: #333;
+    transform: scale(1.2);
+}
+
+.credits {
+    text-align: left;
+    font-size: 0.85rem;
+    color: #000000;
+    padding: 20px 10px;
+    margin-top: 1px;
+    border-top: 1px solid #eee;
+}
